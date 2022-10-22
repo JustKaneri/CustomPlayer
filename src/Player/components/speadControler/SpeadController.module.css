@@ -1,0 +1,35 @@
+.speed{
+    color: white;
+    cursor: pointer;
+    display: block;
+}
+
+.speadSelect{
+    background-color: rgba(30, 197, 188, 0.501);
+    color: white;
+    border-radius: 10px;
+    width: 40px;
+    height: 25px;
+    text-align: center;
+}
+
+.selectorSpead{
+    width: 50px;
+    height: 100px;
+    position: absolute;
+    top:-110px;
+    left: 85%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    background: rgba(255, 255, 255, 0.25);
+    box-shadow: 0 8px 32px 0 rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+     border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    transition: all 0.3s ease-in-out;
+}

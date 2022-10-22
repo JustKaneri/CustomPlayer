@@ -1,5 +1,6 @@
-import React , {useRef,useEffect} from 'react';
+import React , {useRef,useEffect,useState} from 'react';
 import useVideoPlayer from '../hooks/useVideoPlayer';
+import SpeadController from './speadControler/SpeadController';
 
 
 const Player = ({video}) => {
@@ -14,6 +15,7 @@ const Player = ({video}) => {
         handleVideoSpeed,
         toggleMute,
       } = useVideoPlayer(videoElement);
+    
 
     const SetProgress = () => {
         if(videoElement.current !== null ){
@@ -22,13 +24,13 @@ const Player = ({video}) => {
         }
     };
 
+
     useEffect(() => {
        if(playerState.progress == 100){
             console.log(playerState.progress);
             togglePlay();
             videoElement.current.currentTime = 0;
        }
-
     }, [playerState.progress]);
 
     return (
@@ -39,7 +41,7 @@ const Player = ({video}) => {
                 ref={videoElement}
                 onTimeUpdate={handleOnTimeUpdate}
                 />
-                <div className="controls">
+                <div className="controls" >
                     <div className="actions">
                         <button onClick={togglePlay} 
                                 className={!playerState.isPlaying ? "btn-play":"btn-pause"}>
@@ -56,16 +58,10 @@ const Player = ({video}) => {
                             onInput={SetProgress()}
                         />
                     </div>
-                    <select
-                        className="velocity"
-                        value={playerState.speed}
-                        onChange={(e) => handleVideoSpeed(e)}
-                    >
-                        <option className="velocity-item" value="0.50">0.50x</option>
-                        <option className="velocity-item" value="1">1x</option>
-                        <option className="velocity-item" value="1.25">1.25x</option>
-                        <option className="velocity-item" value="2">2x</option>
-                    </select>
+                    <SpeadController value={playerState.speed}
+                                    handleVideoSpeed={handleVideoSpeed}
+
+                    />
                     <button className="mute-btn" onClick={toggleMute}>
                         {!playerState.isMuted ? (
                         <i className="bx bxs-volume-full"></i>

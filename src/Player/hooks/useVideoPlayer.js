@@ -39,8 +39,8 @@ const useVideoPlayer = (videoElement) =>{
       };
     
       
-      const handleVideoSpeed = (event) => {
-        const speed = Number(event.target.value);
+      const handleVideoSpeed = (speed) => {
+        // const speed = Number(event.target.value);
         videoElement.current.playbackRate = speed;
         setPlayerState({
           ...playerState,
