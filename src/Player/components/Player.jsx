@@ -27,7 +27,6 @@ const Player = ({video}) => {
             console.log(playerState.progress);
             togglePlay();
             videoElement.current.currentTime = 0;
-            document.documentElement.style.setProperty("--range", "0%");
        }
 
     }, [playerState.progress]);
@@ -62,10 +61,10 @@ const Player = ({video}) => {
                         value={playerState.speed}
                         onChange={(e) => handleVideoSpeed(e)}
                     >
-                        <option value="0.50">0.50x</option>
-                        <option value="1">1x</option>
-                        <option value="1.25">1.25x</option>
-                        <option value="2">2x</option>
+                        <option className="velocity-item" value="0.50">0.50x</option>
+                        <option className="velocity-item" value="1">1x</option>
+                        <option className="velocity-item" value="1.25">1.25x</option>
+                        <option className="velocity-item" value="2">2x</option>
                     </select>
                     <button className="mute-btn" onClick={toggleMute}>
                         {!playerState.isMuted ? (
