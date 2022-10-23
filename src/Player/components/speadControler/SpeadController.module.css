@@ -5,7 +5,7 @@
 }
 
 .speadSelect{
-    background-color: rgba(30, 197, 188, 0.501);
+    background-color: rgba(43, 46, 46, 0.501);
     color: white;
     border-radius: 10px;
     width: 40px;
@@ -19,7 +19,6 @@
     position: absolute;
     top:-110px;
     left: 85%;
-
     display: flex;
     align-items: center;
     justify-content: space-evenly;
@@ -32,4 +31,5 @@
      border-radius: 10px;
     border: 1px solid rgba(255, 255, 255, 0.18);
     transition: all 0.3s ease-in-out;
+    transform: scale(0,0);
 }

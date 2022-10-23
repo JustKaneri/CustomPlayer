@@ -6,6 +6,8 @@ import SpeadController from './speadControler/SpeadController';
 const Player = ({video}) => {
 
     const videoElement = useRef(null);
+    const mainWindow = useRef(null);
+    const [isVisible,setIsVisible] = useState(false);
 
     const {
         playerState,
@@ -15,7 +17,6 @@ const Player = ({video}) => {
         handleVideoSpeed,
         toggleMute,
       } = useVideoPlayer(videoElement);
-    
 
     const SetProgress = () => {
         if(videoElement.current !== null ){
@@ -23,7 +24,6 @@ const Player = ({video}) => {
             document.documentElement.style.setProperty("--range", value + "%");
         }
     };
-
 
     useEffect(() => {
        if(playerState.progress == 100){
@@ -35,7 +35,7 @@ const Player = ({video}) => {
 
     return (
         <div className="container">
-            <div className="video-wrapper">
+            <div className="video-wrapper" onMouseLeave={()=>setIsVisible(!isVisible)}>
                 <video
                 src={video}
                 ref={videoElement}
@@ -60,7 +60,7 @@ const Player = ({video}) => {
                     </div>
                     <SpeadController value={playerState.speed}
                                     handleVideoSpeed={handleVideoSpeed}
-
+                                    controlVisible={isVisible}
                     />
                     <button className="mute-btn" onClick={toggleMute}>
                         {!playerState.isMuted ? (
