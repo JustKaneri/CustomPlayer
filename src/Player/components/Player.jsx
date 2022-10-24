@@ -1,6 +1,7 @@
 import React , {useRef,useEffect,useState} from 'react';
 import useVideoPlayer from '../hooks/useVideoPlayer';
 import SpeadController from './speadControler/SpeadController';
+import VolumeController from './volumeController/VolumeController';
 
 
 const Player = ({video}) => {
@@ -15,7 +16,7 @@ const Player = ({video}) => {
         handleOnTimeUpdate,
         handleVideoProgress,
         handleVideoSpeed,
-        toggleMute,
+        handleVolume,
       } = useVideoPlayer(videoElement);
 
     const SetProgress = () => {
@@ -62,13 +63,10 @@ const Player = ({video}) => {
                                     handleVideoSpeed={handleVideoSpeed}
                                     controlVisible={isVisible}
                     />
-                    <button className="mute-btn" onClick={toggleMute}>
-                        {!playerState.isMuted ? (
-                        <i className="bx bxs-volume-full"></i>
-                        ) : (
-                        <i className="bx bxs-volume-mute"></i>
-                        )}
-                    </button>
+                   <VolumeController value={playerState.speed}
+                                    handleVolume={handleVolume}
+                                    controlVisible={isVisible}
+                   />
                 </div>
             </div>
         </div>

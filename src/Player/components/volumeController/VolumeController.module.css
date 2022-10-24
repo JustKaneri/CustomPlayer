@@ -1,0 +1,68 @@
+.button_volume{
+    width: 20px;
+    height: 20px;
+    background-image: url('/public/sound.png');
+    background-size: cover;
+    background-position: center;
+    cursor: pointer;
+    border: 0px;
+    background-color: transparent;
+}
+.volume[type="range"] {
+    -webkit-appearance: none !important;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 20px;
+    height: 5px;
+    position: relative;
+    width: 100%;
+    margin-left: 5px;
+    margin-right: 5px;
+    transform: rotate(-90deg);
+  }
+  
+  .volume[type="range"]:before {
+    position: absolute;
+    content: "";
+    width: var(--rangeVolume);
+    height: 5px;
+    background: white;
+  }
+  
+.volume[type="range"]::-webkit-slider-thumb  {
+    -webkit-appearance: none !important;
+    width: 15px;
+    height: 15px;
+    border-radius: 100%;
+    border: none;
+    background-color: white;
+    z-index: 99;
+    position: relative;
+    transition: 0.5s all ease;
+  }
+  
+.volume[type="range"]::-webkit-progress-value {
+    background: white;
+    color: white;
+    background: white;
+}
+
+.selectorVolume{
+    width: 50px;
+    height: 100px;
+    position: absolute;
+    top:-110px;
+    left: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    background: rgba(255, 255, 255, 0.25);
+    box-shadow: 0 8px 32px 0 rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+     border-radius: 10px;
+    border: 3px solid rgb(0 0 0 / 50%);
+    transition: all 0.3s ease-in-out;
+    transform: scale(0,0);
+}

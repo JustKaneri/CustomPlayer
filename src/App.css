@@ -54,7 +54,7 @@ video {
   backdrop-filter: blur(4px);
   -webkit-backdrop-filter: blur(4px);
   border-radius: 10px;
-  border: 1px solid rgba(255, 255, 255, 0.18);
+  border: 3px solid rgb(0 0 0 / 50%);
   transform: translateY(200%);
   transition: all 0.3s ease-in-out;
 }
@@ -131,20 +131,6 @@ input[type="range"]::-webkit-progress-value {
 .velocity-item{
   color: black;
 }
-
-.mute-btn {
-  background: none;
-  border: none;
-  outline: none;
-  cursor: pointer;
-}
-
-.mute-btn i {
-  background-color: none;
-  color: white;
-  font-size: 20px;
-}
-
 
 .btn-play{
   background-position: center;

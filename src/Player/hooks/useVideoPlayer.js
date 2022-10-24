@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 const useVideoPlayer = (videoElement) =>{
     const [playerState, setPlayerState] = useState({
         isPlaying: false,
-        isMuted: false,
+        volume:1,
         progress: 0,
         speed: 1
     });
@@ -48,18 +48,16 @@ const useVideoPlayer = (videoElement) =>{
         });
       };
     
-      const toggleMute = () => {
+      const handleVolume = (volume) => {
         setPlayerState({
           ...playerState,
-          isMuted: !playerState.isMuted,
+          volume: volume
         });
       };
     
       useEffect(() => {
-        playerState.isMuted
-          ? (videoElement.current.muted = true)
-          : (videoElement.current.muted = false);
-      }, [playerState.isMuted, videoElement]);
+        videoElement.current.volume = parseFloat(playerState.volume);
+      }, [playerState.volume, videoElement]);
     
       return {
         playerState,
@@ -67,7 +65,7 @@ const useVideoPlayer = (videoElement) =>{
         handleOnTimeUpdate,
         handleVideoProgress,
         handleVideoSpeed,
-        toggleMute,
+        handleVolume,
       };
 }
 
