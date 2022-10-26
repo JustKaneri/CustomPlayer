@@ -1,8 +1,8 @@
 import React , {useRef,useEffect,useState} from 'react';
 import useVideoPlayer from '../hooks/useVideoPlayer';
+import SizeScreenController from './sizeScreeenController/SizeScreenController';
 import SpeadController from './speadControler/SpeadController';
 import VolumeController from './volumeController/VolumeController';
-
 
 const Player = ({video}) => {
 
@@ -36,7 +36,7 @@ const Player = ({video}) => {
 
     return (
         <div className="container">
-            <div className="video-wrapper" onMouseLeave={()=>setIsVisible(!isVisible)}>
+            <div className="video-wrapper" ref={mainWindow} onMouseLeave={()=>setIsVisible(!isVisible)}>
                 <video
                 src={video}
                 ref={videoElement}
@@ -67,6 +67,7 @@ const Player = ({video}) => {
                                     handleVolume={handleVolume}
                                     controlVisible={isVisible}
                    />
+                   <SizeScreenController mainWindow={mainWindow}/>
                 </div>
             </div>
         </div>
