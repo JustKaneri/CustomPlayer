@@ -1,3 +1,8 @@
+.controller{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 .button_volume{
     width: 20px;
     height: 20px;
@@ -50,8 +55,7 @@
     width: 50px;
     height: 100px;
     position: absolute;
-    top:-110px;
-    left: 85%;
+    bottom: 110%;
     display: flex;
     align-items: center;
     justify-content: space-evenly;

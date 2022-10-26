@@ -1,3 +1,9 @@
+.controller{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .speed{
     color: white;
     cursor: pointer;
@@ -17,8 +23,7 @@
     width: 50px;
     height: 100px;
     position: absolute;
-    top:-110px;
-    left: 80%;
+    bottom: 110%;
     display: flex;
     align-items: center;
     justify-content: space-evenly;

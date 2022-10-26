@@ -1,5 +1,6 @@
 import React , {useRef,useEffect,useState} from 'react';
 import useVideoPlayer from '../hooks/useVideoPlayer';
+import ProgressController from './progressController/ProgressController';
 import SizeScreenController from './sizeScreeenController/SizeScreenController';
 import SpeadController from './speadControler/SpeadController';
 import VolumeController from './volumeController/VolumeController';
@@ -19,21 +20,6 @@ const Player = ({video}) => {
         handleVolume,
       } = useVideoPlayer(videoElement);
 
-    const SetProgress = () => {
-        if(videoElement.current !== null ){
-            const value = Number(videoElement.current.currentTime* 100 / videoElement.current.duration);
-            document.documentElement.style.setProperty("--range", value + "%");
-        }
-    };
-
-    useEffect(() => {
-       if(playerState.progress == 100){
-            console.log(playerState.progress);
-            togglePlay();
-            videoElement.current.currentTime = 0;
-       }
-    }, [playerState.progress]);
-
     return (
         <div className="container">
             <div className="video-wrapper" ref={mainWindow} onMouseLeave={()=>setIsVisible(!isVisible)}>
@@ -48,17 +34,11 @@ const Player = ({video}) => {
                                 className={!playerState.isPlaying ? "btn-play":"btn-pause"}>
                         </button>
                     </div>
-                    <div className="progress">
-                        <input
-                            type="range"
-                            min="0"
-                            max="100"
-                            className ="progress_bar"
-                            value={playerState.progress}
-                            onChange={(e) => handleVideoProgress(e)}
-                            onInput={SetProgress()}
-                        />
-                    </div>
+                    <ProgressController videoElement={videoElement}
+                                        playerState={playerState}
+                                        handleVideoProgress={handleVideoProgress}
+                                        togglePlay={togglePlay}
+                    />
                     <SpeadController value={playerState.speed}
                                     handleVideoSpeed={handleVideoSpeed}
                                     controlVisible={isVisible}

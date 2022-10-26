@@ -31,7 +31,7 @@ const VolumeController = ({value,handleVolume,controlVisible}) => {
     useOutsideClick(panel,()=>setIsVisible(false),btnOpen);
 
     return (
-        <div>
+        <div className={classesStyle.controller}>
             <div ref={panel} className={classesStyle.selectorVolume}>
                 <input
                     type="range"

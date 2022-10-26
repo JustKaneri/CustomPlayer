@@ -21,13 +21,14 @@ const SpeadController = ({value,handleVideoSpeed,controlVisible}) => {
     },[isVisible])
 
     useEffect(()=>{
+        console.log('close');
         setIsVisible(false);
     },[controlVisible])
 
     useOutsideClick(panel,()=>setIsVisible(false),btnOpen);
 
     return (
-        <div>
+        <div className={styleClasses.controller}>
             <div className={styleClasses.selectorSpead}
                  ref={panel}
                  style={{visibility: isVisible? 'visible' : 'hidden' }}
