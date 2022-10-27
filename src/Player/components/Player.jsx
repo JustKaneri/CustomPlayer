@@ -1,5 +1,6 @@
 import React , {useRef,useEffect,useState} from 'react';
 import useVideoPlayer from '../hooks/useVideoPlayer';
+import Actions from './actions/Actions';
 import ProgressController from './progressController/ProgressController';
 import SizeScreenController from './sizeScreeenController/SizeScreenController';
 import SpeadController from './speadControler/SpeadController';
@@ -29,11 +30,10 @@ const Player = ({video}) => {
                 onTimeUpdate={handleOnTimeUpdate}
                 />
                 <div className="controls" >
-                    <div className="actions">
-                        <button onClick={togglePlay} 
-                                className={!playerState.isPlaying ? "btn-play":"btn-pause"}>
-                        </button>
-                    </div>
+                    <Actions
+                        togglePlay={togglePlay}
+                        playerState={playerState}
+                    />
                     <ProgressController videoElement={videoElement}
                                         playerState={playerState}
                                         handleVideoProgress={handleVideoProgress}
@@ -43,11 +43,13 @@ const Player = ({video}) => {
                                     handleVideoSpeed={handleVideoSpeed}
                                     controlVisible={isVisible}
                     />
-                   <VolumeController value={playerState.speed}
+                    <VolumeController value={playerState.speed}
                                     handleVolume={handleVolume}
                                     controlVisible={isVisible}
-                   />
-                   <SizeScreenController mainWindow={mainWindow}/>
+                    />
+                    <SizeScreenController mainWindow={mainWindow}
+                                         setIsVisible ={setIsVisible}
+                    />
                 </div>
             </div>
         </div>

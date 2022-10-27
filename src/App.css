@@ -55,32 +55,3 @@ video {
   transition: all 0.3s ease-in-out;
 }
 
-.actions button {
-  border: none;
-  outline: none;
-  cursor: pointer;
-}
-
-.actions button i {
-  background-color: none;
-  color: white;
-  font-size: 30px;
-}
-
-.btn-play{
-  background-position: center;
-  background-size: cover;
-  background-image: url("../public/play.png");
-  background-color: transparent;
-  width: 20px;
-  height: 20px;
-}
-
-.btn-pause{
-  background-position: center;
-  background-size: cover;
-  background-image: url("../public/pause.png");
-  background-color: transparent;
-  width: 20px;
-  height: 20px;
-}

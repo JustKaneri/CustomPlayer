@@ -1,19 +1,27 @@
 import React, { useEffect, useRef, useState } from 'react';
 import classesStyle from './SizeScreenController.module.css';
 
-const SizeScreenController = ({mainWindow}) => {
+const SizeScreenController = ({mainWindow, setIsVisible}) => {
 
     const [isFullScreen,setFullScreen] = useState(false);
     const buttonScren = useRef(null);
+    let timeout;
 
     useEffect(()=>{
         if(isFullScreen){
             OpenFullScreen(mainWindow.current);
+            mainWindow.current.onmousemove=()=>{
+                clearTimeout(timeout);
+                timeout = setTimeout(()=>{
+                    setIsVisible(false);
+                    console.log('close ');
+                }, 1000);
+            }
         }
         else{
             CloseFullScreen(mainWindow.current);
+            mainWindow.current.onmousemove=null;
         }
-
         
     },[isFullScreen])
 
@@ -27,7 +35,6 @@ const SizeScreenController = ({mainWindow}) => {
     }
 
     function CloseFullScreen(){
-
         if (document.exitFullscreen) {
             document.exitFullscreen();
           } else if (document.webkitExitFullscreen) { /* Safari */

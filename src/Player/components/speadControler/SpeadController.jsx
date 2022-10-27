@@ -21,7 +21,6 @@ const SpeadController = ({value,handleVideoSpeed,controlVisible}) => {
     },[isVisible])
 
     useEffect(()=>{
-        console.log('close');
         setIsVisible(false);
     },[controlVisible])
 
