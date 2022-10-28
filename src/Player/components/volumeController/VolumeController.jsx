@@ -9,7 +9,6 @@ const VolumeController = ({value,handleVolume,controlVisible}) => {
     const panel = useRef(null);
     const btnOpen = useRef(null);
 
-
     useEffect(()=>{
         handleVolume(currentVolume/100);
 
@@ -25,8 +24,6 @@ const VolumeController = ({value,handleVolume,controlVisible}) => {
     useEffect(()=>{
         setIsVisible(false);
     },[controlVisible])
-
-
 
     useOutsideClick(panel,()=>setIsVisible(false),btnOpen);
 

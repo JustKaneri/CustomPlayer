@@ -1,10 +1,6 @@
 import React , {useRef,useEffect,useState} from 'react';
 import useVideoPlayer from '../hooks/useVideoPlayer';
-import Actions from './actions/Actions';
-import ProgressController from './progressController/ProgressController';
-import SizeScreenController from './sizeScreeenController/SizeScreenController';
-import SpeadController from './speadControler/SpeadController';
-import VolumeController from './volumeController/VolumeController';
+import Controls from './controls/Controls';
 
 const Player = ({video}) => {
 
@@ -19,38 +15,31 @@ const Player = ({video}) => {
         handleVideoProgress,
         handleVideoSpeed,
         handleVolume,
-      } = useVideoPlayer(videoElement);
+    } = useVideoPlayer(videoElement);
+
+    const ControlParams = {playerState: playerState,
+                           videoElement:videoElement,
+                           isVisible:isVisible,
+                           mainWindow: mainWindow,
+                           setIsVisible:setIsVisible,
+                           togglePlay: togglePlay,
+                           handleVideoProgress:handleVideoProgress,
+                           handleVideoSpeed:handleVideoSpeed,
+                           handleVolume:handleVolume};
 
     return (
         <div className="container">
-            <div className="video-wrapper" ref={mainWindow} onMouseLeave={()=>setIsVisible(!isVisible)}>
+            <div className="video-wrapper" ref={mainWindow}
+                onMouseLeave={()=>setIsVisible(false)} 
+                 onMouseEnter={()=>setIsVisible(true)}>
                 <video
                 src={video}
                 ref={videoElement}
                 onTimeUpdate={handleOnTimeUpdate}
                 />
-                <div className="controls" >
-                    <Actions
-                        togglePlay={togglePlay}
-                        playerState={playerState}
-                    />
-                    <ProgressController videoElement={videoElement}
-                                        playerState={playerState}
-                                        handleVideoProgress={handleVideoProgress}
-                                        togglePlay={togglePlay}
-                    />
-                    <SpeadController value={playerState.speed}
-                                    handleVideoSpeed={handleVideoSpeed}
-                                    controlVisible={isVisible}
-                    />
-                    <VolumeController value={playerState.speed}
-                                    handleVolume={handleVolume}
-                                    controlVisible={isVisible}
-                    />
-                    <SizeScreenController mainWindow={mainWindow}
-                                         setIsVisible ={setIsVisible}
-                    />
-                </div>
+                <Controls
+                    controlParams={ControlParams}
+                />
             </div>
         </div>
     );

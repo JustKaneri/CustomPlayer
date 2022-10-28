@@ -5,7 +5,7 @@ import styleClasses from './SpeadController.module.css';
 const SpeadController = ({value,handleVideoSpeed,controlVisible}) => {
 
     const speedArray = [0.5,1,1.5,2];
-
+    
     const [currentSpeed,setCurrentSpeed] = useState(value);
     const [isVisible,setIsVisible] = useState(false);
     const panel = useRef(null);
