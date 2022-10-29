@@ -1,6 +1,7 @@
 import React , {useRef,useEffect,useState} from 'react';
 import useVideoPlayer from '../hooks/useVideoPlayer';
 import Controls from './controls/Controls';
+import './PlayerStyle.css'
 
 const Player = ({video}) => {
 
@@ -30,10 +31,11 @@ const Player = ({video}) => {
     return (
         <div className="container">
             <div className="video-wrapper" ref={mainWindow}
-                onMouseLeave={()=>setIsVisible(false)} 
+                 onMouseLeave={()=>setIsVisible(false)} 
                  onMouseEnter={()=>setIsVisible(true)}>
                 <video
-                src={video}
+                src={video.src}
+                poster={video.poster}
                 ref={videoElement}
                 onTimeUpdate={handleOnTimeUpdate}
                 />

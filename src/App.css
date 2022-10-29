@@ -7,29 +7,5 @@
   background-color: rgb(100, 100, 217);
 }
 
-.container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-}
-
-h1 {
-  color: white;
-}
-
-video {
-  width: 100%;
-}
-
-.video-wrapper {
-  width: 100%;
-  max-width: 700px;
-  position: relative;
-  display: flex;
-  justify-content: center;
-  overflow: hidden;
-  border-radius: 10px;
-}
 
 
