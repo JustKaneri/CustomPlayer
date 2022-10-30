@@ -15,15 +15,19 @@ const SizeScreenController = ({mainWindow, setIsVisible,isVisible}) => {
             mainWindow.current.onmousemove=()=>{
                 clearTimeout(timeout);
                 setIsVisible(true);
+                mainWindow.current.style.cursor = 'default';
 
                 timeout = setTimeout(()=>{
                     setIsVisible(false);
+                    mainWindow.current.style.cursor = 'none';
                 }, 3000);
             }
         }
         else{        
             CloseFullScreen(mainWindow.current);
             mainWindow.current.onmousemove=null;
+            
+            
         }   
     },[isFullScreen])
 
