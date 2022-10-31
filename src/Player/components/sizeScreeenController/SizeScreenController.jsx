@@ -25,9 +25,7 @@ const SizeScreenController = ({mainWindow, setIsVisible,isVisible}) => {
         }
         else{        
             CloseFullScreen(mainWindow.current);
-            mainWindow.current.onmousemove=null;
-            
-            
+            mainWindow.current.onmousemove=null;  
         }   
     },[isFullScreen])
 

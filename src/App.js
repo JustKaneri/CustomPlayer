@@ -7,12 +7,15 @@ function App() {
 
   const video = {
     src: videoFile,
-    poster:''
+    poster:posterFile
   }
 
   return (
     <div className='App'>
-       <Player video={video}/>
+      <div style={{width:'600px',height:"350px"}}>
+          <Player video={video}/>
+      </div>
+      
     </div>
     
   );
