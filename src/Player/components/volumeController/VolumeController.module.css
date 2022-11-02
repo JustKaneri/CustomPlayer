@@ -6,7 +6,7 @@
 .button_volume{
     width: 20px;
     height: 20px;
-    background-image: url('/public/sound.png');
+    background-image: url('../../assests/sound.png');
     background-size: cover;
     background-position: center;
     cursor: pointer;

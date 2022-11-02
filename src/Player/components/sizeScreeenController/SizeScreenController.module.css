@@ -1,7 +1,7 @@
 .button_screen_max{
     width: 20px;
     height: 20px;
-    background-image: url("/public/fullscreen.png");
+    background-image: url("../../assests/fullscreen.png");
     background-size: cover;
     background-position: center;
     cursor: pointer;
@@ -12,7 +12,7 @@
 .button_screen_min{
     width: 20px;
     height: 20px;
-    background-image: url("/public/miniscreen.png");
+    background-image: url("../../assests/miniscreen.png");
     background-size: cover;
     background-position: center;
     cursor: pointer;

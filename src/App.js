@@ -1,6 +1,6 @@
 import './App.css';
-import videoFile from "./assests/video.mp4";
-import posterFile from "./assests/Poster.png"
+import videoFile from "./Player/assests/video.mp4";
+import posterFile from "./Player/assests/Poster.png"
 import Player from './Player/components/Player';
 
 function App() {
