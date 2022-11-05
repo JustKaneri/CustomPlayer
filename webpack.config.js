@@ -1,33 +1,31 @@
-const path = require('path');
-const webpack = require("webpack");
 
+var path = require('path');
 module.exports = {
+  entry: './src/index.js',
+  output: {
+    path: path.resolve(__dirname, 'build'),
+    filename: 'index.js',
+    libraryTarget: 'commonjs2'
+  },
   module: {
     rules: [
       {
         test: /\.(js|jsx)$/,
         exclude: /node_modules/,
         use: {
-          loader: "babel-loader"
+            loader: 'babel-loader',
+            options: {
+                presets: ['@babel/preset-env']
+            }
         }
       },
-      { test: /\.css$/, use: 'css-loader' }
+      {  test: /\.css$/i,
+         use: ["style-loader", "css-loader"]
+      }
     ]
   },
-  resolve: {
-    extensions: [".js", ".jsx"]
-  },
-  plugins: [],
   externals: {
-    react: 'react',
-    'react-dom': 'react-dom',
+    'react': 'commonjs react' 
   },
-  entry: {
-	filename: path.resolve(__dirname, './src') + '/index.js'
-  },
-  output: {
-    path: path.resolve(__dirname, './dist/'),
-    filename: 'index.js',
-	libraryTarget: "dist"
-  }
+  mode: 'development'
 };

@@ -1,10 +1,18 @@
 {
   "name": "react-custom-player",
-  "version": "0.1.37",
-  "main": "dist/index",
-  "typings": "src/index",
-  "jsx": "react",
-  
+  "version": "0.1.62",
+  "main": "build/index.js",
+  "devDependencies": {
+    "@babel/core": "^7.1.6",
+    "@babel/preset-env": "^7.1.6",
+    "@babel/preset-react": "^7.0.0",
+    "babel-loader": "^8.0.4",
+    "css-loader": "^6.7.1",
+    "file-loader": "^6.2.0",
+    "url-loader": "^4.1.1",
+    "webpack": "^5.74.0",
+    "webpack-cli": "^3.1.2"
+  },
   "dependencies": {
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
@@ -13,7 +21,7 @@
     "webpack": "^5.74.0"
   },
   "scripts": {
-    "build": "webpack --optimize-minimize --mode production"
+    "build": "webpack"
   },
   "keywords": [
     "react",
@@ -35,11 +43,13 @@
   },
   "author": "JustKaneri",
   "license": "MIT",
-  "style": "./src/Player/components/PlayerStyle.css",
+  "files": [
+    "build/*.css",
+    "build/*.png"
+  ],
   "description": "",
   "bugs": {
     "url": "https://github.com/JustKaneri/CustomPlayer/issues"
   },
-  "homepage": "https://github.com/JustKaneri/CustomPlayer#readme",
-  "devDependencies": {}
+  "homepage": "https://github.com/JustKaneri/CustomPlayer#readme"
 }
