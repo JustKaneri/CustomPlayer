@@ -2,24 +2,28 @@
     border: none;
     outline: none;
     cursor: pointer;
+    margin-left: 3px;
+    margin-right: 3px;
 }
 
 .btn_play{
   background-position: center;
   background-size: cover;
-  background-image: url('../../assests/play.png');
+  background-image: url("data:image/svg+xml,%3Csvg width='250px' height='250px' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpolygon fill='white' stroke='%2300e600' stroke-width='0.5' points='3 22 21 12 3 2'/%3E%3C/svg%3E");
   background-color: transparent;
   border: 0px;
-  width: 20px;
-  height: 20px;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
 }
 
 .btn_pause{
   background-position: center;
   background-size: cover;
-  background-image: url("../../assests/pause.png");
+  background-image: url("data:image/svg+xml,%3Csvg width='250px' height='250px' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill='white' stroke='%2300e600' stroke-width='0.5' d='M3,21 L9,21 L9,3 L3,3 L3,21 Z M15,21 L21,21 L21,3 L15,3 L15,21 Z'/%3E%3C/svg%3E");
   background-color: transparent;
   border: 0px;
-  width: 20px;
-  height: 20px;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
 }

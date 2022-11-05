@@ -2,11 +2,13 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-left: 3px;
+  margin-right: 3px;
 }
 .button_volume{
-    width: 20px;
-    height: 20px;
-    background-image: url('../../assests/sound.png');
+    width: 30px;
+    height: 30px;
+    background-image: url("data:image/svg+xml,%3Csvg width='250px' height='250px' viewBox='0 0 32 32' enable-background='new 0 0 32 32' id='Stock_cut' version='1.1' xml:space='preserve' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3Cdesc/%3E%3Cg%3E%3Cpath d='M13,20 c2.209,0,4-1.791,4-4s-1.791-4-4-4' fill='white' stroke='%2300e600' stroke-linejoin='round' stroke-miterlimit='10' stroke-width='1.5'/%3E%3Cpolygon fill='white' points='7,12 3,12 3,20 7,20 13,26 13,6 ' stroke='%2300e600' stroke-linejoin='round' stroke-miterlimit='10' stroke-width='1.5'/%3E%3Cpath d='M24.314,27.314 C27.209,24.418,29,20.418,29,16s-1.791-8.418-4.686-11.314' fill='none' stroke='%2300e600' stroke-linejoin='round' stroke-miterlimit='10' stroke-width='1.5'/%3E%3Cpath d='M21.485,24.485 C23.657,22.314,25,19.314,25,16c0-3.314-1.343-6.314-3.515-8.485' fill='none' stroke='%2300e600' stroke-linejoin='round' stroke-miterlimit='10' stroke-width='1.5'/%3E%3Cpath d='M18.657,21.657 C20.105,20.209,21,18.209,21,16c0-2.209-0.895-4.209-2.343-5.657' fill='none' stroke='%2300e600' stroke-linejoin='round' stroke-miterlimit='10' stroke-width='1.5'/%3E%3C/g%3E%3C/svg%3E");
     background-size: cover;
     background-position: center;
     cursor: pointer;
@@ -19,7 +21,7 @@
     border-radius: 20px;
     height: 5px;
     position: relative;
-    width: 100%;
+    width: 150%;
     margin-left: 5px;
     margin-right: 5px;
     transform: rotate(-90deg);
@@ -30,7 +32,7 @@
     content: "";
     width: var(--rangeVolume);
     height: 5px;
-    background: white;
+    background: #00e600;
   }
   
 .volume[type="range"]::-webkit-slider-thumb  {
@@ -39,7 +41,7 @@
     height: 15px;
     border-radius: 100%;
     border: none;
-    background-color: white;
+    background-color: #00e600;
     z-index: 99;
     position: relative;
     transition: 0.5s all ease;
@@ -66,7 +68,7 @@
     backdrop-filter: blur(4px);
     -webkit-backdrop-filter: blur(4px);
      border-radius: 10px;
-    border: 3px solid rgb(0 0 0 / 50%);
+    border: 3px solid rgb(0 230 0 / 50%);
     transition: all 0.3s ease-in-out;
     transform: scale(0,0);
 }

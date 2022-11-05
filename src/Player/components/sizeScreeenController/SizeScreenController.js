@@ -7,25 +7,28 @@ const SizeScreenController = ({mainWindow, setIsVisible,isVisible}) => {
     const [isFullScreen,setFullScreen] = useState(false);
     const buttonScren = useRef(null);
     const [OpenFullScreen,CloseFullScreen] = useSizeScreen();
-    let timeout;
+    let timeout = useRef(null);
 
     useEffect(()=>{
         if(isFullScreen){
             OpenFullScreen(mainWindow.current);
             mainWindow.current.onmousemove=()=>{
-                clearTimeout(timeout);
+                clearTimeout(timeout.current);
                 setIsVisible(true);
                 mainWindow.current.style.cursor = 'default';
 
-                timeout = setTimeout(()=>{
+                timeout.current = setTimeout(()=>{
                     setIsVisible(false);
                     mainWindow.current.style.cursor = 'none';
                 }, 3000);
             }
         }
-        else{        
+        else{ 
+            clearTimeout(timeout.current);
+            mainWindow.current.onmousemove=null; 
+            mainWindow.current.style.cursor = 'default';      
             CloseFullScreen(mainWindow.current);
-            mainWindow.current.onmousemove=null;  
+           
         }   
     },[isFullScreen])
 

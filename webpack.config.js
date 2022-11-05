@@ -5,6 +5,7 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, 'build'),
     filename: 'index.js',
+    publicPath: "build/",
     libraryTarget: 'commonjs2'
   },
   module: {
@@ -21,8 +22,17 @@ module.exports = {
       },
       {  test: /\.css$/i,
          use: ["style-loader", "css-loader"]
+      },
+      {
+        test: /\.(png|svg|jpg|jpeg|gif)$/i,
+        type: 'asset/resource',
       }
     ]
+  },
+  resolve: {
+    alias: {
+      'assets': path.resolve(__dirname, 'src/Player/assests')
+    }
   },
   externals: {
     'react': 'commonjs react' 

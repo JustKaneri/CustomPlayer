@@ -15,7 +15,7 @@
 
 .progress_bar[type="range"] {
   -webkit-appearance: none !important;
-  background: rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.477);
   border-radius: 20px;
   height: 5px;
   position: relative;
@@ -29,7 +29,7 @@
   content: "";
   width: var(--range);
   height: 5px;
-  background: white;
+  background: #00e600;
 }
 
 .progress_bar[type="range"]::-webkit-slider-thumb  {
@@ -38,7 +38,7 @@
   height: 15px;
   border-radius: 100%;
   border: none;
-  background-color: white;
+  background-color: #00e600;
   z-index: 99;
   position: relative;
   transition: 0.5s all ease;
