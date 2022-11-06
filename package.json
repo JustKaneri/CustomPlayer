@@ -1,6 +1,6 @@
 {
   "name": "react-custom-player",
-  "version": "0.1.80",
+  "version": "0.1.9",
   "main": "build/index.js",
   "devDependencies": {
     "@babel/core": "^7.1.6",
@@ -44,8 +44,7 @@
   "author": "JustKaneri",
   "license": "MIT",
   "files": [
-    "build/*.css",
-    "build/*.png"
+    "build/*.css"
   ],
   "description": "",
   "bugs": {

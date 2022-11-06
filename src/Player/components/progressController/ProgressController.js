@@ -12,7 +12,6 @@ const ProgressController = ({videoElement,playerState,handleVideoProgress,toggle
 
     useEffect(() => {
        if(playerState.progress == 100){
-            console.log(playerState.progress);
             togglePlay();
             videoElement.current.currentTime = 0;
        }
