@@ -9,7 +9,7 @@
 .button_volume{
     width: 30px;
     height: 30px;
-    background-image: url("data:image/svg+xml,%3Csvg width='250px' height='250px' viewBox='0 0 32 32' enable-background='new 0 0 32 32' id='Stock_cut' version='1.1' xml:space='preserve' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3Cdesc/%3E%3Cg%3E%3Cpath d='M13,20 c2.209,0,4-1.791,4-4s-1.791-4-4-4' fill='white' stroke='%2300e600' stroke-linejoin='round' stroke-miterlimit='10' stroke-width='1.5'/%3E%3Cpolygon fill='white' points='7,12 3,12 3,20 7,20 13,26 13,6 ' stroke='%2300e600' stroke-linejoin='round' stroke-miterlimit='10' stroke-width='1.5'/%3E%3Cpath d='M24.314,27.314 C27.209,24.418,29,20.418,29,16s-1.791-8.418-4.686-11.314' fill='none' stroke='%2300e600' stroke-linejoin='round' stroke-miterlimit='10' stroke-width='1.5'/%3E%3Cpath d='M21.485,24.485 C23.657,22.314,25,19.314,25,16c0-3.314-1.343-6.314-3.515-8.485' fill='none' stroke='%2300e600' stroke-linejoin='round' stroke-miterlimit='10' stroke-width='1.5'/%3E%3Cpath d='M18.657,21.657 C20.105,20.209,21,18.209,21,16c0-2.209-0.895-4.209-2.343-5.657' fill='none' stroke='%2300e600' stroke-linejoin='round' stroke-miterlimit='10' stroke-width='1.5'/%3E%3C/g%3E%3C/svg%3E");
+    background-image: url("data:image/svg+xml,%3Csvg width='250px' height='250px' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg' aria-labelledby='soundsIconTitle' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' color='white'%3E%3Cpath d='M12 7L12 17'/%3E%3Cpath d='M15 10L15 14'/%3E%3Cpath d='M18 8L18 16'/%3E%3Cpath d='M21 13L21 11'/%3E%3Cpath d='M9 4L9 20'/%3E%3Cpath d='M6 9L6 15'/%3E%3Cpath d='M3 13L3 11'/%3E%3C/svg%3E");
     background-size: cover;
     background-position: center;
     cursor: pointer;
@@ -18,7 +18,7 @@
 }
 .volume[type="range"] {
     -webkit-appearance: none !important;
-    background: rgba(255, 255, 255, 0.2);
+    background: rgba(255, 255, 255, 0.6);
     border-radius: 20px;
     height: 5px;
     position: relative;
@@ -64,7 +64,7 @@
     justify-content: space-evenly;
     flex-direction: column;
     flex-wrap: nowrap;
-    background: rgba(255, 255, 255, 0.25);
+    background:  rgb(0,230,0,0.1);;
     box-shadow: 0 8px 32px 0 rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(4px);
     -webkit-backdrop-filter: blur(4px);

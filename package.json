@@ -1,6 +1,6 @@
 {
   "name": "react-custom-player",
-  "version": "0.1.9",
+  "version": "0.2.05",
   "main": "build/index.js",
   "devDependencies": {
     "@babel/core": "^7.1.6",

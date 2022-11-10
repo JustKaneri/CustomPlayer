@@ -15,7 +15,7 @@
 
 .progress_bar[type="range"] {
   -webkit-appearance: none !important;
-  background: rgba(255, 255, 255, 0.477);
+  background: rgba(255, 255, 255, 0.6);
   border-radius: 20px;
   height: 5px;
   position: relative;

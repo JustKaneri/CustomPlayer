@@ -43,7 +43,7 @@ const SpeadController = ({value,handleVideoSpeed,controlVisible}) => {
                     </span>
                 )}
             </div>
-            <span ref={btnOpen} className={styleClasses.speed} onClick={()=>setIsVisible(!isVisible)}>{value}x</span>
+            <button ref={btnOpen} className={styleClasses.button_speed} onClick={()=>setIsVisible(!isVisible)}></button>
         </div>
     );
 }

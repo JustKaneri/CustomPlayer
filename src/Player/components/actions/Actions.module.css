@@ -9,21 +9,21 @@
 .btn_play{
   background-position: center;
   background-size: cover;
-  background-image: url("data:image/svg+xml,%3Csvg width='250px' height='250px' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpolygon fill='white' stroke='%2300e600' stroke-width='0.5' points='3 22 21 12 3 2'/%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml,%3Csvg width='250px' height='250px' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill='none' stroke='white' stroke-width='2' d='M3,22.0000002 L21,12 L3,2 L3,22.0000002 Z M5,19 L17.5999998,11.9999999 L5,5 L5,19 Z M7,16 L14.1999999,12 L7,8 L7,16 Z M9,13 L10.8,12 L9,11 L9,13 Z'/%3E%3C/svg%3E%0A");
   background-color: transparent;
   border: 0px;
-  width: 30px;
-  height: 30px;
+  width: 25px;
+  height: 25px;
   cursor: pointer;
 }
 
 .btn_pause{
   background-position: center;
   background-size: cover;
-  background-image: url("data:image/svg+xml,%3Csvg width='250px' height='250px' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill='white' stroke='%2300e600' stroke-width='0.5' d='M3,21 L9,21 L9,3 L3,3 L3,21 Z M15,21 L21,21 L21,3 L15,3 L15,21 Z'/%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml,%3Csvg width='250px' height='250px' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill='none' stroke='white' stroke-width='2' d='M3,21 L9,21 L9,3 L3,3 L3,21 Z M4,19 L8,19 L8,5 L4,5 L4,19 Z M5,17 L7,17 L7,7 L5,7 L5,17 Z M15,21 L21,21 L21,3 L15,3 L15,21 Z M16,19 L20,19 L20,5 L16,5 L16,19 Z M17,17 L19,17 L19,7 L17,7 L17,17 Z'/%3E%3C/svg%3E%0A");
   background-color: transparent;
   border: 0px;
-  width: 30px;
-  height: 30px;
+  width: 25px;
+  height: 25px;
   cursor: pointer;
 }
