@@ -1,4 +1,5 @@
 import React , {useRef,useState} from 'react';
+import usePlay from '../hooks/usePlay';
 import useVideoPlayer from '../hooks/useVideoPlayer';
 import Controls from './controls/Controls';
 import './PlayerStyle.css'
@@ -27,6 +28,8 @@ const Player = ({video}) => {
                            handleVideoProgress:handleVideoProgress,
                            handleVideoSpeed:handleVideoSpeed,
                            handleVolume:handleVolume};
+
+    usePlay(togglePlay);
 
     return (
         <div className="container">
