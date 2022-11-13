@@ -9,7 +9,7 @@
 
 ## Update
 
-> Change color them
+> Changing the color theme
 
 
 > Play and Pause on key 'Space'
