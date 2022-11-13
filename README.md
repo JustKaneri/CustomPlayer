@@ -6,6 +6,15 @@
 
 > npm i react-custom-player
 
+
+## Update
+
+> Change color them
+
+
+> Play and Pause on key 'Space'
+
+
 ## Exapmle using 
 
 >  Import
