@@ -34,7 +34,7 @@ const Controls = ({controlParams}) => {
                             handleVideoSpeed={controlParams.handleVideoSpeed}
                             controlVisible={controlParams.isVisible}
             />
-            <VolumeController value={controlParams.playerState.speed}
+            <VolumeController value={controlParams.playerState.volume}
                             handleVolume={controlParams.handleVolume}
                             controlVisible={controlParams.isVisible}
             />

@@ -7,12 +7,16 @@
 > npm i react-custom-player
 
 
-## Update
+## Values used localStorage
 
-> Changing the color theme
+> videoVolume
 
 
-> Play and Pause on key 'Space'
+## Values used :root
+
+> --rage
+
+> --rangeVolume
 
 
 ## Exapmle using 

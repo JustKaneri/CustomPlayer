@@ -1,9 +1,22 @@
 import { useEffect, useState } from "react";
 
 const useVideoPlayer = (videoElement) =>{
+
+    
+  const getVolume = () =>{
+    let volume = localStorage.getItem('videoVolume');
+
+    if(volume == null || volume < 0 || volume > 1){
+      localStorage.setItem('videoVolume',0.5);
+      return 0.5;
+    }
+
+    return volume;
+  }
+
     const [playerState, setPlayerState] = useState({
         isPlaying: false,
-        volume:1,
+        volume: getVolume(),
         progress: 0,
         speed: 1
     });
@@ -49,6 +62,7 @@ const useVideoPlayer = (videoElement) =>{
       };
     
       const handleVolume = (volume) => {
+        localStorage.setItem('videoVolume',volume);
         setPlayerState({
           ...playerState,
           volume: volume
