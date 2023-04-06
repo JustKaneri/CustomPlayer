@@ -14,7 +14,7 @@
 }
 
 .progress_bar[type="range"] {
-  -webkit-appearance: none !important;
+  -webkit-appearance: none ;
   background: rgba(255, 255, 255, 0.6);
   border-radius: 20px;
   height: 5px;
@@ -24,7 +24,8 @@
   margin-right: 5px;
 }
 
-.progress_bar:before {
+.progress_bar::before {
+  -moz-appearance:initial;
   position: absolute;
   content: "";
   width: var(--range);
@@ -45,6 +46,24 @@
 }
 
 .progress_bar[type="range"]::-webkit-progress-value {
+  background: white;
+  color: white;
+  background: white;
+}
+
+.progress_bar::-moz-range-thumb {
+  -moz-appearance: none !important;
+  width: 15px;
+  height: 15px;
+  border-radius: 100%;
+  border: none;
+  background-color: rgba(26,26,26);
+  z-index: 99;
+  position: relative;
+  transition: 0.5s all ease;
+}
+
+.progress_bar::-moz-progress-bar {
   background: white;
   color: white;
   background: white;

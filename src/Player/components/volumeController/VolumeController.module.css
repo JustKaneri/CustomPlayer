@@ -28,7 +28,7 @@
     transform: rotate(-90deg);
   }
   
-  .volume[type="range"]:before {
+  .volume[type="range"]::before {
     position: absolute;
     content: "";
     width: var(--rangeVolume);
@@ -47,11 +47,29 @@
     position: relative;
     transition: 0.5s all ease;
   }
+
+  .volume[type="range"]::-moz-range-thumb {
+    -moz-appearance: none !important;
+    width: 15px;
+    height: 15px;
+    border-radius: 100%;
+    border: none;
+    background-color: rgba(26,26,26);
+    z-index: 99;
+    position: relative;
+    transition: 0.5s all ease;
+  }
   
 .volume[type="range"]::-webkit-progress-value {
     background: white;
     color: white;
     background: white;
+}
+
+.volume[type="range"]::-moz-progress-bar {
+  background: white;
+  color: white;
+  background: white;
 }
 
 .selectorVolume{

@@ -7,6 +7,11 @@
 > npm i react-custom-player
 
 
+## Work on 
+
+> Safari and Chrome
+
+
 ## Values used localStorage
 
 > videoVolume
